@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  google-analytics: "UA-342215677"
+  title: "Step Up Cytometry"
+  navbar:
+    background: white
+    left:
+      - href: index.qmd
+        text: Home
+  page-footer: 
+   left: Made with [Quarto](https://quarto.org/)
+   right: View [Website Code](https://github.com/StepUpCytometry/StepUpCytometry.github.io)
+
+format:
+  html:
+    css: styles.css
+
