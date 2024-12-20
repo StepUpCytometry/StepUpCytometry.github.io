@@ -5,7 +5,7 @@
 
 # Step Up Cytometry
 
-This GitHub repository is a collection of educational materials intended to help beginners getting started learning Cytometry in R. Having struggled to find resources when they first were getting started, this project is the authors attempt to give back to the broader community by reducing the barrier to entry. The material within is a work-in-progress being contributed on their own time.
+This GitHub repository is a collection of educational materials intended to help beginners getting started learning Cytometry in R. Having struggled to find resources when first getting started, this project is the authors attempt to give back to the broader community by reducing the barrier to entry. The material within is a work-in-progress being contributed on their own time.
 
 To get started, please navigate to our [website](https://stepupcytometry.github.io/index).
 

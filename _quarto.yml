@@ -23,7 +23,7 @@ website:
    left: Made with [Quarto](https://quarto.org/)
    right: |
     ![GPL-3.0](/images/GPL3.png)
-    ![CC-BY-SA](images/CCBYSA.png)
+    ![CC-BY-SA](/images/CCBYSA.png)
 
 format:
   html:
