@@ -5,5 +5,75 @@
     "title": "Step Up Cytometry",
     "section": "",
     "text": "Step Up Cytometry\nThis GitHub repository is a collection of educational materials intended to help beginners getting started learning Cytometry in R. Having struggled to find resources when they first were getting started, this project is the authors attempt to give back to the broader community by reducing the barrier to entry. The material within is a work-in-progress being contributed on their own time.\nTo get started, please navigate to our website.\nHave an idea and want to see what others in the community think? Click here to find our discussions page\nEncountered a bug and want to report it? Open a new issue here.\nWant to contribute to the project by contributing new sections (or editing my pre-morning coffee English)? Always happy for the help, see Contributions for additional details.\n\n \n\nThis material is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. The code examples are licensed under the GNU GENERAL PUBLIC LICENSE (GPL-3.0)"
+  },
+  {
+    "objectID": "articles/GitAndRstudio.html",
+    "href": "articles/GitAndRstudio.html",
+    "title": "Forking the project",
+    "section": "",
+    "text": "Once your GitHub account is set up, it’s time to use it. Our core’s version of the dashboard is contained within the InstrumentQC repository. This is publicly available, and since the software repository is licensed under a free copyleft license, you are able to fork (ie. copy) the existing project and modify it.\nTo do so, you will first navigate to the InstrumentQC repository. From here you will select the fork the repository option\n\n\n\n\n\nGitHub will then give you the option to rename the project or to keep the existing name. If you modify the name, there may be a couple additional lines of code you will need to also adjust in the future, but this will be minor enough of a concern so don’t let that stop you if you hate the existing name.\n\n\n\n\n\nWith that done, you now have your own copy of the repository. Since it is forked, you can now modify and customize the dashboard so that is customized to your instruments and tracks their QC data. Before proceeding, please make a note about your forked repositories url as you will need it later when when bringing in the project to the local computer environment with Rstudio in a little bit."
+  },
+  {
+    "objectID": "articles/GitAndRstudio.html#setup",
+    "href": "articles/GitAndRstudio.html#setup",
+    "title": "Forking the project",
+    "section": "Setup",
+    "text": "Setup\nThe next big task is to set up Rstudio, making sure that Git is set up properly and that you can send the version changes to the repository files to GitHub without any issues.\nGo ahead and open up Rstudio. If it is your first time doing so, select the default R installation from the first pop-up window. Open up Rstudio for the first time, and set to use the default R installation.\nWe first need to make sure Rstudio can communicate with GitHub through Git. To do this we will first install the R package devtools. To do so, copy the following lines of code invidivually into the console window and hit enter to run the commands:\n\ninstall.packages(\"devtools\")\ninstall.packages(\"BiocManager\")\n\nlibrary(devtools)\nlibrary(BiocManager)\n\nFor coding-beginners, please note, if any errors pop up during the installation of devtools, read the red troubleshooting explanations shown, and install any missing package dependencies by swapping in the package name between the quotation marks similar to what was done in the code chunk above to install the devtools package.\nOnce devtools is installed, and you have called it via library, we can now continue.\nAdjacent to your console tab on the lower left, there is another tab called terminal. Go ahead and click it.\n\n\n\n\n\nNow that you have switched from the console to the terminal, copy-paste using your mouse/right-click the following lines of code individually, editing in your GitHub UserName, and email linked to your GitHub account:\n\ngit config --global user.email \"JohnDoe@gmail.com\"\n\ngit config --global user.name \"John Doe\""
+  },
+  {
+    "objectID": "articles/GitAndRstudio.html#github-token",
+    "href": "articles/GitAndRstudio.html#github-token",
+    "title": "Forking the project",
+    "section": "GitHub Token",
+    "text": "GitHub Token\nWith this done, it is now time to get a GitHub Token that will be used for authorization for your local computer to send/receive files from your GitHub repository.\nTo do this, open a browser, and navigate back to your GitHub account, click on your profile icon on the far upper right, and then select settings\n\n\n\n\n\nFrom here, you will navigate to the lower left side and click on developer settings\n\n\n\n\n\nOnce you are on the next page, you will select Tokens (classic) option\n\n\n\n\n\nFrom there, you will now proceed to click on Generate new token and select the classic option\n\n\n\n\n\nOn the next screen, things get busy. Go ahead and place a note for the token with the instrument name so you know which match with each other. Set the expiration for no expiration or a long-period, and only click on the repo option to grant those accesses. Proceed down to the bottom of the screen and click on the green generate token button.\n\n\n\n\n\nThe website will refresh and provide you a GitHub token and the option to copy it. Copy it and temporarily store it in a .txt file (notepad) as you will need it when setting up the connection between Github and Rstudio. You will not be able to see the code again from this screen, so stash wisely, and be cautious not to store this anywhere that others may find it."
+  },
+  {
+    "objectID": "articles/GitAndRstudio.html#rstudio",
+    "href": "articles/GitAndRstudio.html#rstudio",
+    "title": "Forking the project",
+    "section": "Rstudio",
+    "text": "Rstudio\nNow that you have your token, go back to Rstudio, and enter the following lines of code into your console:\n\ngitcreds::gitcreds_set()\n\nA pop-up window will appear. Follow the instructions and when prompted, provide it the Github Token code that you generated. Next hit enter. You should be all set to now pull/push (ie. receive/send) files to GitHub from your local computer.\nWhile we are here, let’s address the last thing we will need to do with the GitHub access token for. Go ahead and enter the following line of code in the console:\n\nusethis::edit_r_environ()\n\nThis will open an .Renviron file that will likely be blank. Enter the following line of code, swapping in your specific token in its entirety between the quotation marks.\n\nGITHUB_PAT &lt;- \"GitHubTokenGoesHere\"\n\nOnce this is done, save and close out of Rstudio. Open it again to make sure the changes are saved."
+  },
+  {
+    "objectID": "articles/Installation.html",
+    "href": "articles/Installation.html",
+    "title": "Install Software",
+    "section": "",
+    "text": "You will first need to make sure that R, Rstudio, Rtools, Quarto and Git are installed on every instrument computer that you will be collecting daily QC data from. Follow along below for instructions for downloading each on a Windows computer.\n\n\nR is a free software and programming language used by researchers and data scientist worldwide. To begin you will need to navigate to the main website. You will first select Download R for Windows\n\n\n\n\n\nYou will be redirected to the next screen, where you should select install R for the first time:\n\n\n\n\n\nAnd finally you will see the following screen, where you will select the current version of Download R for Windows:\n\n\n\n\n\nThe next screen will ask where you want to save the installer. I generally place it on the desktop. Once downloaded, double click and proceed with the software installation, selecting the default options.\n\n\n\nRstudio is an integrated development environment (IDE), providing an interface with R that is friendlier to many users. We will use it in our context to set up project folders that will contain the code and data needed to process the QC data and export it to the dashboard.\nTo download, we first navigate to the website and select Download R Studio Desktop for Windows\n\n\n\n\n\nThis will then proceed to show the pop-up asking where you want to save the installer. Save to the desktop, and then double click the installer. Follow the default installation prompts.\n\n\n\nR packages are made up of functions that carry out specific tasks. Some of the R packages that we will be using require compilation from source code, which requires installation of Rtools to mediate this process.\nTo begin, navigate to the website and select the most recent version of Rtools\n\n\n\n\n\nThen, you will select the regular Rtools installer\n\n\n\n\n\nThis will then provide the pop-up asking where to save the installer. Place on the desktop, then after it has finished downloading, double click to run the installer. Select the default options.\n\n\n\nThe dashboard (and this website you are currently reading) are built with Quarto. It facilitates making websites from various programming languages commonly used by data scientist who didn’t start off as computer programmers. In our context, we will be using it as part of our code explanations, data visualizations, and to write reports.\nTo begin, after navigating to the website we will first select the Get Started tab\n\n\n\n\n\nThen we will select Download Quarto Cli to download the most recent version for Windows.\n\n\n\n\n\nFinally, the pop-up asking where we want to save the installer will pop up. Save to the desktop, and after it finished downloading, double click and select the default options.\n\n\n\nGit is used for version control by many programmers. We will be using it in the keep track of changes to our code, and to manage our stored files on to GitHub.\nTo begin, we will first navigate to the website and select the download from Windows option.\n\n\n\n\n\nWe will then proceed and select install 64-bit Git for Windows Setup option\n\n\n\n\n\nFinally, the pop-up will appear asking where to save the installer. Select and save to the Desktop. After the installer has finished downloading, double click, and accept the default options. Be advised, Git has a lot of options, for now, just accept all defaults without wandering off on a “What is Vim?!?” rabbit-hole."
+  },
+  {
+    "objectID": "articles/Installation.html#r",
+    "href": "articles/Installation.html#r",
+    "title": "Install Software",
+    "section": "",
+    "text": "R is a free software and programming language used by researchers and data scientist worldwide. To begin you will need to navigate to the main website. You will first select Download R for Windows\n\n\n\n\n\nYou will be redirected to the next screen, where you should select install R for the first time:\n\n\n\n\n\nAnd finally you will see the following screen, where you will select the current version of Download R for Windows:\n\n\n\n\n\nThe next screen will ask where you want to save the installer. I generally place it on the desktop. Once downloaded, double click and proceed with the software installation, selecting the default options."
+  },
+  {
+    "objectID": "articles/Installation.html#rstudio",
+    "href": "articles/Installation.html#rstudio",
+    "title": "Install Software",
+    "section": "",
+    "text": "Rstudio is an integrated development environment (IDE), providing an interface with R that is friendlier to many users. We will use it in our context to set up project folders that will contain the code and data needed to process the QC data and export it to the dashboard.\nTo download, we first navigate to the website and select Download R Studio Desktop for Windows\n\n\n\n\n\nThis will then proceed to show the pop-up asking where you want to save the installer. Save to the desktop, and then double click the installer. Follow the default installation prompts."
+  },
+  {
+    "objectID": "articles/Installation.html#rtools",
+    "href": "articles/Installation.html#rtools",
+    "title": "Install Software",
+    "section": "",
+    "text": "R packages are made up of functions that carry out specific tasks. Some of the R packages that we will be using require compilation from source code, which requires installation of Rtools to mediate this process.\nTo begin, navigate to the website and select the most recent version of Rtools\n\n\n\n\n\nThen, you will select the regular Rtools installer\n\n\n\n\n\nThis will then provide the pop-up asking where to save the installer. Place on the desktop, then after it has finished downloading, double click to run the installer. Select the default options."
+  },
+  {
+    "objectID": "articles/Installation.html#quarto",
+    "href": "articles/Installation.html#quarto",
+    "title": "Install Software",
+    "section": "",
+    "text": "The dashboard (and this website you are currently reading) are built with Quarto. It facilitates making websites from various programming languages commonly used by data scientist who didn’t start off as computer programmers. In our context, we will be using it as part of our code explanations, data visualizations, and to write reports.\nTo begin, after navigating to the website we will first select the Get Started tab\n\n\n\n\n\nThen we will select Download Quarto Cli to download the most recent version for Windows.\n\n\n\n\n\nFinally, the pop-up asking where we want to save the installer will pop up. Save to the desktop, and after it finished downloading, double click and select the default options."
+  },
+  {
+    "objectID": "articles/Installation.html#git",
+    "href": "articles/Installation.html#git",
+    "title": "Install Software",
+    "section": "",
+    "text": "Git is used for version control by many programmers. We will be using it in the keep track of changes to our code, and to manage our stored files on to GitHub.\nTo begin, we will first navigate to the website and select the download from Windows option.\n\n\n\n\n\nWe will then proceed and select install 64-bit Git for Windows Setup option\n\n\n\n\n\nFinally, the pop-up will appear asking where to save the installer. Select and save to the Desktop. After the installer has finished downloading, double click, and accept the default options. Be advised, Git has a lot of options, for now, just accept all defaults without wandering off on a “What is Vim?!?” rabbit-hole."
   }
 ]

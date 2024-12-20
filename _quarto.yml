@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: docs
-
 website:
   google-analytics: "UA-342215677"
   title: "Step Up Cytometry"
@@ -10,9 +9,21 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - text: "Articles"
+        menu: 
+        - text: "Installation"
+          href: articles/Installation.qmd
+        - text: "Setting up Git and Rstudio"
+          href: articles/GitAndRstudio.qmd
+    right:
+    - icon: github
+      href: https://github.com/StepUpCytometry/StepUpCytometry.github.io
+      aria-label: GitHub
   page-footer: 
    left: Made with [Quarto](https://quarto.org/)
-   right: View [Website Code](https://github.com/StepUpCytometry/StepUpCytometry.github.io)
+   right: |
+    ![GPL-3.0](/images/GPL3.png)
+    ![CC-BY-SA](images/CCBYSA.png)
 
 format:
   html:
