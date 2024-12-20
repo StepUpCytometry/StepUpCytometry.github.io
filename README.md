@@ -1,7 +1,7 @@
-<div style="text-align: right;">
+
 [![GPL-3.0][gpl3-shield]][gpl3]
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
-</div>
+
 
 # Step Up Cytometry
 
@@ -15,10 +15,10 @@ Encountered a bug and want to report it? Open a new issue [here](https://github.
 
 Want to contribute to the project by contributing new sections (or editing my pre-morning coffee English)? Always happy for the help, see [Contributions]() for additional details. 
 
-<div style="text-align: right;">
+
 [![GPL-3.0][gpl3-image]][gpl3]
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-</div>
+
 This material is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 The code examples are licensed under the [GNU GENERAL PUBLIC LICENSE (GPL-3.0)]()
 
