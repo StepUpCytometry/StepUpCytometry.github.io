@@ -19,12 +19,33 @@ website:
     - icon: github
       href: https://github.com/StepUpCytometry/StepUpCytometry.github.io
       aria-label: GitHub
+  sidebar:
+      style: floating
+      search: true
+      contents:
+        - section: "Getting Started"
+          contents:
+          -  text: "Introduction"
+             href: https://stepupcytometry.github.io/Introduction/
+          -  text: "Set Up"
+             href: https://stepupcytometry.github.io/SetUp/
+          -  text: "Infrastructure"
+             href: https://stepupcytometry.github.io/Infrastructure/
+          -  text: "Data Wrangling"
+             href: https://stepupcytometry.github.io/DataWrangling/
+          -  text: "Plotting"
+             href: https://stepupcytometry.github.io/Plotting/
+          -  text: "Functions"
+             href: https://stepupcytometry.github.io/Functions/
+          -  text: "Packages"
+             href: https://stepupcytometry.github.io/Packages/
+          -  text: "Version Control"
+             href: https://stepupcytometry.github.io/VersionControl/
   page-footer: 
    left: Made with [Quarto](https://quarto.org/)
    right: |
-    ![GPL-3.0](/images/GPL3.png)
+    ![AGPL-3.0](/images/AGPL3.png)
     ![CC-BY-SA](/images/CCBYSA.png)
-
 format:
   html:
     css: styles.css
