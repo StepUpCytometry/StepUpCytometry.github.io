@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
 website:
-  google-analytics: "UA-342215677"
+  google-analytics: "G-JMLSN1NXWD"
   title: "Step Up Cytometry"
   navbar:
     background: white
@@ -17,7 +17,7 @@ website:
           href: articles/GitAndRstudio.qmd
     right:
     - icon: github
-      href: https://github.com/StepUpCytometry/StepUpCytometry.github.io
+      href: https://github.com/StepUpCytometry/
       aria-label: GitHub
   sidebar:
       style: floating
